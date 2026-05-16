@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Nuance AI</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Manrope:wght@500;600;700;800&family=Nunito:wght@500;600;700&display=swap" rel="stylesheet">
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            colors: {
+              mist: '#F6F9F8',
+              'warm-beige': '#FAF3EB',
+              apricot: '#FFE3C0',
+              'apricot-hover': '#FFD6A4',
+              eucalyptus: '#C4DED7',
+              'blush-pink': '#FFD5D6',
+              'deep-brown': '#2C2C2C',
+              'warm-gray': '#888888',
+              coral: '#FF9A7B',
+            },
+            fontFamily: {
+              sans: ['Inter', 'sans-serif'],
+              display: ['Manrope', 'sans-serif'],
+              label: ['Nunito', 'sans-serif'],
+            },
+            animation: {
+              'breathe': 'breathe 4s ease-in-out infinite',
+              'slideUpFade': 'slideUpFade 0.4s cubic-bezier(0.16, 1, 0.3, 1) forwards',
+            },
+            keyframes: {
+              breathe: {
+                '0%, 100%': { transform: 'scale(1)' },
+                '50%': { transform: 'scale(1.05)' },
+              },
+              slideUpFade: {
+                '0%': { opacity: '0', transform: 'translateY(12px) scale(0.98)' },
+                '100%': { opacity: '1', transform: 'translateY(0) scale(1)' },
+              }
+            }
+          }
+        }
+      }
+    </script>
+    <style>
+      body {
+        font-family: 'Inter', sans-serif;
+        background-color: #F6F9F8; /* mist */
+        color: #2C2C2C; /* deep-brown */
+      }
+      /* Custom scrollbar */
+      ::-webkit-scrollbar {
+        width: 8px;
+      }
+      ::-webkit-scrollbar-track {
+        background: #F6F9F8; 
+      }
+      ::-webkit-scrollbar-thumb {
+        background: #C4DED7; 
+        border-radius: 4px;
+      }
+      ::-webkit-scrollbar-thumb:hover {
+        background: #888888; 
+      }
+    </style>
+</head>
+  <body>
+    <div id="root"></div>
+    <script type="module" src="/index.tsx"></script>
+  </body>
+</html>
